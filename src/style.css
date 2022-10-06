@@ -1,1 +1,159 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+
+body {
+  background: green;
+}
+
+.cards {
+  text-align: center;
+  max-width: 30rem;
+}
+
+.card {
+  position: relative;
+  display: inline-block;
+  width: 10.7rem;
+  height: 15rem;
+  font-size: 1.5rem;
+  margin: 0.625rem;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0px 5px 15px #d9d7dd;
+}
+
+.card:before,
+.card:after {
+  content: attr(value);
+  position: absolute;
+  width: 0.875rem;
+  text-align: center;
+  letter-spacing: -0.125rem;
+}
+
+.card:before {
+  top: 0.25rem;
+  left: 0.25rem;
+}
+
+.card:after {
+  bottom: 0.25rem;
+  right: 0.25rem;
+  transform: rotate(180deg);
+}
+
+.card-heart {
+  color: red;
+}
+
+.card-heart:before,
+.card-heart:after {
+  content: attr(value);
+}
+
+.card-spade {
+  color: black;
+}
+
+.card-spade:before,
+.card-spade:after {
+  content: attr(value);
+}
+
+.card-trevol {
+  color: black;
+}
+
+.card-trevol:before,
+.card-trevol:after {
+  content: attr(value);
+}
+
+.card-trevol .card_symbol:before {
+  content: "♣";
+}
+
+.card-diamond {
+  color: red;
+}
+
+.card-diamond:before,
+.card-diamond:after {
+  content: attr(value);
+}
+
+.card-diamond .card_symbol:before {
+  content: "♦";
+}
+
+.card_inner {
+  box-sizing: border-box;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  top: 1.5rem;
+  left: 1.5rem;
+  right: 1.5rem;
+  bottom: 1.5rem;
+}
+
+.card_inner-centered {
+  justify-content: center;
+}
+
+.card_column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 4.375rem;
+}
+
+.card_column-centered {
+  justify-content: center;
+}
+
+.card_symbol {
+  display: inline-block;
+  height: 2.5rem;
+  text-align: center;
+}
+
+.card_symbol:before {
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+}
+
+.card-heart .card_symbol:before {
+  content: "♥";
+}
+
+.card-spade .card_symbol:before {
+  content: "♠";
+}
+
+.card_symbol-rotated,
+.card_symbol:last-of-type {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.card_symbol:first-of-type {
+  -webkit-transform: rotate(0);
+  transform: rotate(0);
+}
+
+.card_symbol-big {
+  flex-basis: 3.75rem;
+}
+
+.card_symbol-huge {
+  flex-basis: 6.75rem;
+}
+
+#draw,
+#sortselection,
+#clear {
+  margin-top: 5px;
+  border-radius: 5px;
+  color: white;
+  background-color: blue;
+}
